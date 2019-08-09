@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap
+data:
+apiVersion: v1
+data:
+  config.json: |-
+    {
+      "nodePathMap": {{ .Values.nodePathMap | toPrettyJson | nindent 8 }}
+    }
